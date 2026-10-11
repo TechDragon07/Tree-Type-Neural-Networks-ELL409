@@ -1,0 +1,18 @@
+{
+  "dataset": "catsdogs",
+  "class_names": [
+    "cat",
+    "dog"
+  ],
+  "active_children_after_pruning": [
+    0,
+    1
+  ],
+  "unpruned_parameters": 96470,
+  "pruned_parameters": 96470,
+  "pruned_train_loss": 0.15048101544380188,
+  "pruned_train_accuracy": 1.0,
+  "pruned_test_loss": 1.3153353929519653,
+  "pruned_test_accuracy": 0.63671875,
+  "device": "cpu"
+}

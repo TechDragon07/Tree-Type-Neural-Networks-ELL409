@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corrective-neural-tree"
+version = "0.1.0"
+description = "Stage-wise corrective neural trees for CIFAR-10 and Cats vs Dogs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "datasets>=3.0",
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "pillow>=10.0",
+  "torch>=2.2",
+  "torchvision>=0.17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+tree-nn = "tree_nn.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tree_nn*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
